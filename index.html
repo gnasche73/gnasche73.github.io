@@ -4,19 +4,33 @@
 	<meta charset="UTF-8">
 	<title>Photo Gallery</title>
 	<link rel="stylesheet" href="gallery.css">
-	<script src = "gallery.js"></script>
+	<script src="gallery.js"></script>
+	<style>
+		.gallery-container {
+			display: flex;
+			justify-content: center;
+			gap: 5px;
+		}
+		.preview {
+			width: auto;
+			height: 100px;
+			cursor: pointer;
+			margin: 0;
+			padding: 0;
+		}
+	</style>
 </head>
-<body>
-	
-	<div id = "image">
+<body onload="initializeGallery()">
+	<div id="image" style="text-align: center;">
 		Hover over an image below to display here.
 	</div>
-	
-	<img class = "preview" alt = "Styling with a Bandana" src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon.jpg" onmouseover = "upDate(this)" onmouseout = "unDo()">
-	
-	<img class = "preview" alt = "With My Boy" src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon2.JPG" onmouseover = "upDate(this)" onmouseout = "unDo()">
-	
-	<img class = "preview" src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon3.jpg" alt = "Young Puppy" onmouseover = "upDate(this)" onmouseout = "unDo()">
-
+	<div class="gallery-container">
+		<img class="preview" alt="Styling with a Bandana" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon.jpg" tabindex="0">
+		<img class="preview" alt="With My Boy" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon2.JPG" tabindex="0">
+		<img class="preview" alt="Young Puppy" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon3.jpg" tabindex="0">
+		<img class="preview" alt="Relaxing Dog" src="https://www.whole-dog-journal.com/wp-content/uploads/2024/01/Iris_tractor_supply.jpg.optimal.jpg" tabindex="0">
+		<img class="preview" alt="Curious Pup" src="https://images.pexels.com/photos/19320845/pexels-photo-19320845/free-photo-of-cute-curious-puppy.jpeg" tabindex="0">
+		<img class="preview" alt="Playful Mood" src="https://media.istockphoto.com/id/1026489614/photo/six-month-old-french-bulldog-in-a-playful-mood-with-toy.jpg?s=1024x1024&w=is&k=20&c=4FYkeiILWuf7VkotJXMdcxzjMN_Zmny2sZc6XoY9dkU=" tabindex="0">
+	</div>
 </body>
 </html>
